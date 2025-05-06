@@ -1,14 +1,35 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>REJEKI444 - Home</title>
-<link rel='stylesheet' href='css/style.css'>
+<link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("Service Worker Registered"));
+  }
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REJEKI444 - Slot & Togel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<h1>Selamat Datang di REJEKI444</h1>
-<nav>
-<a href='slot.html'>Slot</a> | <a href='togel.html'>Togel</a> | <a href='promo.html'>Promosi</a>
-</nav>
-<footer>© 2025 REJEKI444</footer>
+  <header class="hero">
+    <div class="logo-container">
+      <img src="assets/images/naga-slot-logo.gif" alt="Logo Naga Slot" class="logo-anim">
+      <audio id="jackpot-sound" src="assets/sounds/jackpot.mp3"></audio>
+    </div>
+    <h1>Selamat Datang di REJEKI444</h1>
+  </header>
+
+  <script>
+    // Mainkan suara saat logo muncul
+    window.addEventListener("load", () => {
+      const audio = document.getElementById("jackpot-sound");
+      if (audio) audio.play();
+    });
+  </script>
 </body>
 </html>
